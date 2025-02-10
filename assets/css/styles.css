@@ -1,41 +1,56 @@
 /* remember, that Bootstrap is used here, most declarations are hence left out*/
 
-/* General Parameters */
-html {
+
+html[theme="dark mode"] {
     --text: #dae6e5;
     --accent: #ffb325; /*39d876*/
     --title: #2DC9BA; 
     --link: #48C9B0;
     --bg: #2E3B4E;
+
+    --nav-bg: #2E3B4E; /* fixed */
     
-    --link-text-hover: #E9F4F3; /* not used yet */
-    --link-bg-hover: #00000000; /* not used yet */
+    --link-text-hover: #E9F4F3; 
+    --link-bg-hover: #00000000; 
     
-    --act-bg: #48C9B0; /* not used yet */
-    --act-text: #000000; /* not used yet */
-    --act-border: #000000; /* not used yet */
+    --act-bg: #48C9B0;  
+    --act-text: #000000; 
+    --act-border: #000000;
     
-    --act-bg-hover: #000000; /* not used yet */
-    --act-text-hover: #48C9B0; /* not used yet */
-    --act-border-hover: #48C9B0; /* not used yet */
+    --act-bg-hover: #000000;  
+    --act-text-hover: #48C9B0; 
+    --act-border-hover: #48C9B0;
     
-    --dis-text: #889E9C; /* not used yet */
-    --dis-bg: #A4B7B6; /* not used yet */
-    --dis-border: #A4B7B6; /* not used yet */
+    --dis-text: #889E9C; 
+    --dis-bg: #A4B7B6; 
+    --dis-border: #A4B7B6;
+
 }
 
+/* 01 General Parameters ------------------------------------- */
 html[theme="light mode"] {
 	--text: #2b2b2b;
-	--accent: #154b2a ; /* not used yet */
-	--title: #315857; /* not used yet */
-	--link: #1b816c; /* not used yet */
+	--accent: #154b2a; 
+	--title: #315857; 
+	--link: #1b816c; 
     --bg: #eee; 
 }
 
-.logo {
+html[theme] body {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+nav {
+    height: 56px;
+    background-color: var(--bg);
+}
+
+/* 02 Generic classes ------------------------------------------ */
+html[theme] .logo {
     justify-content: inline;
     vertical-align: middle;
-    color: white;
+    color: #eee;
     font-size: 1.1rem;
 }
 
@@ -49,12 +64,45 @@ html[theme="light mode"] {
     margin:  0 auto;
 }
 
-.btn-colors {
-    border: 2px solid var(--act-border);
+html[theme] .btn {
+    border: none;
     background-color: var(--bg);
     color: var(--text);
 }
 
+html[theme] .navbar-toggler {
+    background-color: var(--act-bg);
+    padding: 8px 12px;
+    color: var(--act-text);
+    transition: background-color 0.3s ease;    
+}
+
+html[theme] .navbar-toggler:hover {
+    background-color: var(--act-bg-hover);
+}
+
+html[theme] .navbar-toggler:hover > i {
+    color: var(--act-text-hover);
+}
+
+html[theme] .navbar-toggler:focus,
+html[theme] .navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* 03 specific elements ------------------------------------ */
+#theme-toggle {
+    margin: auto 15px auto auto;
+    background-color: #00000020;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+#theme-toggle:hover {
+    background-color: #00000080;
+}
 
 /* Tablet size */
 @media (max-width: 768px) {
