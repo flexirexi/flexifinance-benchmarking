@@ -7,6 +7,7 @@ html[theme="dark mode"] {
     --title: #2DC9BA; 
     --link: #48C9B0;
     --bg: #2E3B4E;
+    --bg2: #415065;
 
     --nav-bg: #2E3B4E; /* fixed */
     
@@ -34,16 +35,23 @@ html[theme="light mode"] {
 	--title: #315857; 
 	--link: #1b816c; 
     --bg: #eee; 
+    --bg2: #eee;
 }
 
 html[theme] body {
-    background-color: var(--bg);
+    background:  linear-gradient(60deg, var(--bg), var(--bg2));
     color: var(--text);
 }
 
-nav {
+html[theme] h1, h2, h3, h4, h5, h6 {
+    color: var(--title);
+    text-shadow: 1px 1.5px 3px #000000B0;
+}
+
+html[theme] nav {
     height: 56px;
-    background-color: var(--bg);
+    background-color: var(--nav-bg);
+    box-shadow: 2px 2px 7px #00000060;
 }
 
 /* 02 Generic classes ------------------------------------------ */
@@ -91,6 +99,14 @@ html[theme] .navbar-toggler:active {
     box-shadow: none;
 }
 
+html[theme] .landing-page {
+    height: calc(100vh - 56px);
+    margin-top: 56px;
+    padding-top: 20vh;
+    display: block;
+    text-align: center;
+
+}
 
 /* 03 specific elements ------------------------------------ */
 #theme-toggle {
