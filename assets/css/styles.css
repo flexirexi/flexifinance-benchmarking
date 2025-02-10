@@ -31,11 +31,28 @@ html[theme="dark mode"] {
 /* 01 General Parameters ------------------------------------- */
 html[theme="light mode"] {
 	--text: #2b2b2b;
-	--accent: #154b2a; 
+	--accent: #c2881d; 
 	--title: #315857; 
 	--link: #1b816c; 
-    --bg: #eee; 
-    --bg2: #eee;
+    --bg: #d8d8d8; 
+    --bg2: #d8d8d8;
+
+    --nav-bg: #2E3B4E; /* fixed */
+
+    --link-text-hover: #E9F4F3;  /* fixed */
+    --link-bg-hover: #00000000;  /* fixed */
+    
+    --act-bg: #48C9B0;   /* fixed */
+    --act-text: #000000;  /* fixed */
+    --act-border: #000000; /* fixed */
+    
+    --act-bg-hover: #000000;   /* fixed */
+    --act-text-hover: #48C9B0;  /* fixed */
+    --act-border-hover: #48C9B0; /* fixed */
+    
+    --dis-text: #889E9C;  /* fixed */
+    --dis-bg: #A4B7B6;  /* fixed */
+    --dis-border: #A4B7B6; /* fixed */
 }
 
 html[theme] body {
@@ -52,6 +69,7 @@ html[theme] nav {
     height: 56px;
     background-color: var(--nav-bg);
     box-shadow: 2px 2px 7px #00000060;
+    z-index: 1;
 }
 
 /* 02 Generic classes ------------------------------------------ */
@@ -59,17 +77,17 @@ html[theme] .logo {
     justify-content: inline;
     vertical-align: middle;
     color: #eee;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
 }
 
 .logo > img {
-    height: 40px;
+    height: 33px;
     margin-right: 15px;
-    margin-left: 3px;
+    margin-left: 1px;
 }
 
 .logo > p {
-    margin:  0 auto;
+    vertical-align: middle;
 }
 
 html[theme] .btn {
@@ -120,7 +138,28 @@ html[theme] .landing-page {
     background-color: #00000080;
 }
 
+html[theme] .offcanvas-body a {
+    color: var(--link);
+    text-decoration: none;
+    transition: text-underline-offset 0.6s ease;
+}
+
+html[theme] .offcanvas-body a:hover {
+    color: var(--link);
+    text-decoration: underline 1px solid;
+    text-decoration-color: var(--link);
+    text-underline-offset: 4px;
+}
+
 /* Tablet size */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+    .logo > img {
+        height: 40px;
+        margin-right: 15px;
+        margin-left: 3px;
+    }
     
+    html[theme] .logo {
+        font-size: 1.1rem;
+    }
 }
