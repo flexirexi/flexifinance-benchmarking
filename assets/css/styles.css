@@ -1,0 +1,62 @@
+/* remember, that Bootstrap is used here, most declarations are hence left out*/
+
+/* General Parameters */
+html {
+    --text: #dae6e5;
+    --accent: #ffb325; /*39d876*/
+    --title: #2DC9BA; 
+    --link: #48C9B0;
+    --bg: #2E3B4E;
+    
+    --link-text-hover: #E9F4F3; /* not used yet */
+    --link-bg-hover: #00000000; /* not used yet */
+    
+    --act-bg: #48C9B0; /* not used yet */
+    --act-text: #000000; /* not used yet */
+    --act-border: #000000; /* not used yet */
+    
+    --act-bg-hover: #000000; /* not used yet */
+    --act-text-hover: #48C9B0; /* not used yet */
+    --act-border-hover: #48C9B0; /* not used yet */
+    
+    --dis-text: #889E9C; /* not used yet */
+    --dis-bg: #A4B7B6; /* not used yet */
+    --dis-border: #A4B7B6; /* not used yet */
+}
+
+html[theme="light mode"] {
+	--text: #2b2b2b;
+	--accent: #154b2a ; /* not used yet */
+	--title: #315857; /* not used yet */
+	--link: #1b816c; /* not used yet */
+    --bg: #eee; 
+}
+
+.logo {
+    justify-content: inline;
+    vertical-align: middle;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.logo > img {
+    height: 40px;
+    margin-right: 15px;
+    margin-left: 3px;
+}
+
+.logo > p {
+    margin:  0 auto;
+}
+
+.btn-colors {
+    border: 2px solid var(--act-border);
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+
+/* Tablet size */
+@media (max-width: 768px) {
+    
+}

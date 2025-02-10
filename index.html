@@ -1,141 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html theme="dark mode" lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FF - Benchmarking</title>
-  
+
   <!-- styles -->
   <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/abstract_logo_final.png" type="image/png">
+
+</head>
+
+<body>
+  <!-- nav bar -->
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <div class="logo">
+        <img src="assets/img/abstract_logo_final.png" alt="Logo">
+        <span id="nav-header" class="smooth-box">BENCHMARKING</span>
+      </div>
+      <button id="theme-toggle" class="btn btn-colors">☀️ Light Mode</button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER: landing page -->
+  <header class="landing-page">
+    <h1>Benchmarking</h1>
+    <p class="lead">
+      Upload 2 financial time series. Compare the value growth, performance and risk. Put it into a perspective.
+      <br><br>Get the difference.
+    </p>
+  </header>
+
+  <!-- ASIDE: benchmarking summary -->
+  <aside class="benchmarking-summary card card-body" style="float: bottom;">
+    <h5>Data Set Summary</h5>
+    <p>Some description of the benchmarked datasets</p>
+  </aside>
+
+  <!-- ARTICLE: content container -->
+  <article class="container">
+    <!-- value growth -->
+    <section class="section-growth">
+      <h3>Value growth</h3>
+      <div class="content">
+        <p>find a value growth chart above this text</p>
+      </div>
+    </section>
+
+    <!-- Performance chart -->
+    <section class="section-perf">
+      <h3>Historical Performance</h3>
+      <div class="content">
+        <p>find a performance chart above this text</p>
+      </div>
+    </section>
+
+    <!-- rolling risk chart-->
+    <section class="section-risk">
+      <h3>Rolling Risk</h3>
+      <div class="content">
+        <p>find a rolling risk chart above this text</p>
+      </div>
+    </section>
+
+    <!-- Single Index Modell plot -->
+    <section class="section-sim">
+      <h3>Single Index Modell</h3>
+      <div class="content">
+        <p>find a SIM scatter plot above this text</p>
+      </div>
+    </section>
+
+    <hr>
+    <!-- Performance Summary table -->
+    <section class="section-perf-sum">
+      <h3>Performance Summary</h3>
+      <div class="content">
+        <p class="lead">find the performance summary table below this text</p>
+      </div>
+    </section>
+  </article>
+
+  <!-- footer -->
+  <footer>
+  </footer>
 
   <!-- Chart.js libraries -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/moment"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
-  
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
-  <!-- Favicon -->
-  <link rel="icon" href="assets/img/abstract_logo_final.png" type="image/png">
 
   <!-- Bootstrap 5 (mit Popper)-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</head>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 
-<body>
-    <!-- nav bar -->
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Offcanvas dark navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <form class="d-flex mt-3" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-success" type="submit">Search</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </nav>
+  <!-- Font Awesome kit -->
+  <script src="https://kit.fontawesome.com/ee874b1d34.js" crossorigin="anonymous"></script>
 
-    <!-- HEADER: landing page -->
-    <header class="landing-page">
-        <h1>Benchmarking</h1>
-        <p class="lead">
-            Upload 2 financial time series. Compare the value growth, performance and risk. Put it into a perspective.
-            <br><br>Get the difference.
-        </p>
-    </header>
-
-    <!-- ASIDE: benchmarking summary -->
-    <aside class="benchmarking-summary card card-body" style="float: bottom;">
-        <h5>Data Set Summary</h5>
-        <p>Some description of the benchmarked datasets</p>
-    </aside>
-
-    <!-- ARTICLE: content container -->
-    <article class="container">
-        <!-- value growth -->
-        <section class="section-growth">
-            <h3>Value growth</h3>
-            <div class="content">
-                <p>find a value growth chart above this text</p>
-            </div>
-        </section>
-        
-        <!-- Performance chart -->
-        <section class="section-perf">
-            <h3>Historical Performance</h3>
-            <div class="content">
-                <p>find a performance chart above this text</p>
-            </div>
-        </section>
-
-        <!-- rolling risk chart-->
-        <section class="section-risk">
-            <h3>Rolling Risk</h3>
-            <div class="content">
-                <p>find a rolling risk chart above this text</p>
-            </div>
-        </section>
-
-        <!-- Single Index Modell plot -->
-        <section class="section-sim">
-            <h3>Single Index Modell</h3>
-            <div class="content">
-                <p>find a SIM scatter plot above this text</p>
-            </div>
-        </section>
-
-        <hr>
-         <!-- Performance Summary table -->
-         <section class="section-perf-sum">
-            <h3>Performance Summary</h3>
-            <div class="content">
-                <p class="lead">find the performance summary table below this text</p>
-            </div>
-        </section>
-    </article>
-
-    <!-- footer -->
-    <footer>
-    </footer>
-
-    <!-- Font Awesome kit -->
-    <script src="https://kit.fontawesome.com/ee874b1d34.js" crossorigin="anonymous"></script>
-
-    <!-- java script -->
-    <script type="module" src="assets/js/main.js"></script>
+  <!-- java script -->
+  <script type="module" src="assets/js/main.js"></script>
 </body>
+
 </html>
