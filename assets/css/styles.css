@@ -32,7 +32,7 @@ html[theme="dark mode"] {
 html[theme="light mode"] {
 	--text: #2b2b2b;
 	--accent: #c2881d; 
-	--title: #315857; 
+	--title: #315a59; 
 	--link: #1b816c; 
     --bg: #d8d8d8; 
     --bg2: #d8d8d8;
@@ -61,15 +61,20 @@ html[theme] body {
     padding: 0 3%;
 }
 
+
 html[theme] h1, h2, h3, h4, h5, h6 {
     color: var(--title) !important;
     text-shadow: 1px 1.5px 3px #000000B0;
 }
 
+html[theme="light mode"] h1, h2, h3, h4, h5, h6 {
+    text-shadow: 1px 1.5px 2px #00000030;
+}
+
 html[theme] nav {
     height: 56px;
     background-color: var(--nav-bg);
-    box-shadow: 2px 2px 7px #00000060;
+    box-shadow: 2px 2px 7px #00000070;
     z-index: 1;
 }
 
@@ -80,7 +85,10 @@ html[theme] body article {
 html[theme] body aside {
     display: none;
     width: 20%;
+    max-width: 350px;
     flex: 1;
+    background-color: #00000025;
+    padding: 10px 5px;
 }
 
 /* 02 Generic classes ------------------------------------------ */
@@ -162,14 +170,17 @@ html[theme] .offcanvas-body a:hover {
     text-underline-offset: 4px;
 }
 
-html[theme] body > .containerx {
+html[theme] .containerx {
     display: flex;
     width: 100%;
     padding: 0;
     margin: 0;
-    
+    gap: 18px;
 }
 
+html[theme] .containerx section {
+    min-height: 200px;
+}
 
 
 /* Tablet size */
